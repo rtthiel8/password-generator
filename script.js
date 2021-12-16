@@ -24,6 +24,8 @@ var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 var symbols = ['!', '@', '#', '$', '%', '^', '&', '*']
 var chosenChars = []
 
+var desired = prompt('How many characters would you like your password to be?');
+  console.log(desired)
 
 if (confirm('Would you like to include lowercase letters?')) {
    chosenChars.push(lowercase)
@@ -40,11 +42,17 @@ if (confirm('Would you like to include numbers?')) {
 if (confirm('Would you like to include symbols?')) {
   chosenChars.push(symbols)
 }
-console.log(chosenChars)
+console.log(chosenChars);
 
-function randomChars(chosenChars) {
-  return chosenChars[Math.floor(Math.random()*chosenChars.length)];
+for (let i = 0; i < desired.length; i++) {
+  console.log (chosenChars[i]);
 }
 
-console.log(randomChars)
+
+
+//function randomChars(chosenChars) {
+//  return chosenChars[Math.floor(Math.random()*chosenChars.length)];
+//}
+
+//console.log(randomChars)
 
