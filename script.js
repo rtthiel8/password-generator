@@ -17,93 +17,51 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-var includeLowercaseLetters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-var includeUppercaseLetters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-var includeNumbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-var includeSymbols = ['!', '@', '#', '$', '%', '^', '&', '*']
-var possibleCharacters = []
+
+var lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
+var symbols = ['!', '@', '#', '$', '%', '^', '&', '*']
+var chosenChars= []
+
 
 //window.prompt("How long would you like your password to be?")
 //var length = (Number(prompt("Choose password length between 8 - 128 characters."));
 
 
-var includeLowercaseLetters = false;
+var lowercase = false;
 if (confirm('Would you like to include lowercase letters?')) {
-  includeLowercaseLetters = true;
+  lowercase = true;
 }
-if (true) {
-  var possibleCharacters = [includeLowercaseLetters]
-}
-
-if (includeLowercaseLetters) {
-  // push all the uppercase letters into possibleCharacters
+if (true){
+  var chosenChars = [...chosenChars, ...lowercase]
 }
 
-var includeUppercaseLetters = false;
+var uppercase = false;
 if (confirm('Would you like to include uppercase letters?')) {
-  includeUppercaseLetters = true;
+  uppercase = true;
+}
+if (true){
+  var chosenChars = [...chosenChars, ...uppercase]
 }
 
-var possibleCharacters = [];
-
-if (includeUppercaseLetters) {
-  // push all the uppercase letters into possibleCharacters
-}
-
-var includeNumbers = false;
-if (confirm('Would you like to include uppercase letters?')) {
-  includeNumbers = true;
-}
-
-var possibleCharacters = [];
-
-if (includeNumbers) {
-  // push all the uppercase letters into possibleCharacters
-}
-
-var includeSymbols = false;
-if (confirm('Would you like to include uppercase letters?')) {
-  includeSymbols = true;
-}
-
-var possibleCharacters = [];
-
-if (includeSymbols) {
-  // push all the uppercase letters into possibleCharacters
-}
-
-
-
-
-
-if (confirm('Would you like to include lowercase letters?')) {
-}
-function random_lowerCase(lowerCase) {
-  return lowerCase[Math.floor(Math.random()*lowerCase.length)];
-}
-  console.log(random_lowerCase(lowerCase));
-
-
-if (confirm('Would you like to include uppercase letters?')) {
-}
-function random_upperCase(upperCase) {
-    return upperCase[Math.floor(Math.random()*upperCase.length)];
-    }
-    console.log(random_upperCase(upperCase));
-
+var numbers = false;
 if (confirm('Would you like to include numbers?')) {
+  numbers = true;
 }
-function random_numbers(numbers) {
-  return numbers[Math.floor(Math.random()*numbers.length)];
-  }
-  console.log(random_numbers(numbers));
+if (true){
+  var chosenChars = [...chosenChars, ...numbers]
+}
 
-if (confirm('Would you like to include symbols?')) {
+var symbols = false;
+if (confirm('Would you like to include uppercase letters?')) {
+  symbols = true;
 }
-function random_symbols(symbols) {
-  return symbols[Math.floor(Math.random()*symbols.length)];
-  }
-  console.log(random_symbols(symbols));
+if (true){
+  var chosenChars = [...chosenChars, ...symbols]
+}
+
+
 
 
 //while password.length 
