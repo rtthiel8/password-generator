@@ -22,51 +22,29 @@ var lowercase = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm'
 var uppercase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 var numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 var symbols = ['!', '@', '#', '$', '%', '^', '&', '*']
-var chosenChars= []
+var chosenChars = []
 
 
-//window.prompt("How long would you like your password to be?")
-//var length = (Number(prompt("Choose password length between 8 - 128 characters."));
-
-
-var lowercase = false;
 if (confirm('Would you like to include lowercase letters?')) {
-  lowercase = true;
-}
-if (true){
-  var chosenChars = [...chosenChars, ...lowercase]
+   chosenChars.push(lowercase)
 }
 
-var uppercase = false;
 if (confirm('Would you like to include uppercase letters?')) {
-  uppercase = true;
-}
-if (true){
-  var chosenChars = [...chosenChars, ...uppercase]
+   chosenChars.push(uppercase)
 }
 
-var numbers = false;
 if (confirm('Would you like to include numbers?')) {
-  numbers = true;
-}
-if (true){
-  var chosenChars = [...chosenChars, ...numbers]
+  chosenChars.push(numbers)
 }
 
-var symbols = false;
-if (confirm('Would you like to include uppercase letters?')) {
-  symbols = true;
+if (confirm('Would you like to include symbols?')) {
+  chosenChars.push(symbols)
 }
-if (true){
-  var chosenChars = [...chosenChars, ...symbols]
+console.log(chosenChars)
+
+function randomChars(chosenChars) {
+  return chosenChars[Math.floor(Math.random()*chosenChars.length)];
 }
 
+console.log(randomChars)
 
-
-
-//while password.length 
-
-  
-// while password is < desired length keep adding random characters from chosen types
-// const lowerCase = Math.floor(Math.random() * lowerCase.length);
-// console.log(random, lowerCase[random]);
