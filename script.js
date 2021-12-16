@@ -22,21 +22,46 @@ const upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', '
 const numbers = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
 const symbols = ['!', '@', '#', '$', '%', '^', '&', '*']
 
+//window.prompt("How long would you like your password to be?")
+//var length = (Number(prompt("Choose password length between 8 - 128 characters."));
+
+
 if (confirm('Would you like to include lowercase letters?')) {
-  console.log(lowerCase);
 }
+function random_lowerCase(lowerCase) {
+  return lowerCase[Math.floor(Math.random()*lowerCase.length)];
+}
+  console.log(random_lowerCase(lowerCase));
+   
+//  else {
+//    break;
 
 
-if (confirm('Would you like to inclue uppercase letters?')) {
-  console.log(upperCase);
+if (confirm('Would you like to include uppercase letters?')) {
 }
+function random_upperCase(upperCase) {
+    return upperCase[Math.floor(Math.random()*upperCase.length)];
+    }
+    console.log(random_upperCase(upperCase));
 
 if (confirm('Would you like to include numbers?')) {
-  console.log(numbers);
 }
+function random_numbers(numbers) {
+  return numbers[Math.floor(Math.random()*numbers.length)];
+  }
+  console.log(random_numbers(numbers));
 
 if (confirm('Would you like to include symbols?')) {
-  console.log(symbols);
 }
+function random_symbols(symbols) {
+  return symbols[Math.floor(Math.random()*symbols.length)];
+  }
+  console.log(random_symbols(symbols));
 
 
+//while password.length 
+
+  
+// while password is < desired length keep adding random characters from chosen types
+// const lowerCase = Math.floor(Math.random() * lowerCase.length);
+// console.log(random, lowerCase[random]);
